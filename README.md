@@ -34,7 +34,7 @@ I used the Nvidia network architecture to finish this project. The architecture 
 
 Add dropout layers in order to reduce overfitting (.7) after advises.
 
-The model was trained and validated on different data sets (80% for training, 20% for validation, in model.fit(...)) to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets (80% for training, 20% for validation, in model.fit(...validation_split = 0.2...)) to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 #### 3. Model parameter tuning
 
