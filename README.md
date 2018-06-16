@@ -32,9 +32,9 @@ I used the Nvidia network architecture to finish this project. The architecture 
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting.
+Add dropout layers in order to reduce overfitting (.7) after advises.
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets (80% for training, 20% for validation, in model.fit(...)) to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 #### 3. Model parameter tuning
 
@@ -42,11 +42,11 @@ The model used an adam optimizer, so the learning rate was not tuned manually.
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. In this project, I only use the central camera. I train the car with the simulator for five laps, the first two laps, I drive the car in clock-wise. The next two laps I drive the car in counter-clock wise. The last lap I drive the car focus on turns and drive off the road on purpose to teach the car to turn back once it get off the road. 
+Training data was chosen to keep the vehicle driving on the road. In this project, I use three cameras. I train the car with the simulator for one lap. After this lap I found the car still drive off the road
 
-The training dataset contains 15977 images and validation dataset contains 3995 images. 
+The training dataset contains 8174 images and validation dataset contains 2044 images. 
 
-Epochs was set 15 in the first time however, overfitting happened after 10 epochs so I change it to 10. And the patch size equals to 128 as usual
+Epochs was set 15 in the first time however, overfitting happened after 10 epochs so I change it to 7. And the patch size equals to 128 as usual
 
 For details about how I created the training data, see the next section. 
 
